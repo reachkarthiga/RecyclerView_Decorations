@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.recyclerview_decorations.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_horizontal_Fragment"
+            app:destination="@id/horizontal_Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_vertical_Fragment"
+            app:destination="@id/vertical_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/horizontal_Fragment"
+        android:name="com.example.recyclerview_decorations.horizontal.Horizontal_Fragment"
+        android:label="fragment_horizontal_"
+        tools:layout="@layout/fragment_horizontal_" />
+    <fragment
+        android:id="@+id/vertical_Fragment"
+        android:name="com.example.recyclerview_decorations.vertical.Vertical_Fragment"
+        android:label="fragment_vertical_"
+        tools:layout="@layout/fragment_vertical_" />
+</navigation>
